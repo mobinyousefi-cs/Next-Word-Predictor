@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "next-word-predictor"
+version = "0.1.0"
+description = "A clean, modular next-word prediction model implemented in PyTorch."
+authors = [
+  { name = "Mobin Yousefi", email = "" },
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["nlp", "language-model", "next-word-prediction", "pytorch"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+  "torch>=2.0.0",
+  "tqdm>=4.60.0",
+  "typer>=0.9.0",
+  "numpy>=1.23.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0.0",
+  "black>=24.0.0",
+  "ruff>=0.6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/mobinyousefi-cs/next-word-predictor"
+Repository = "https://github.com/mobinyousefi-cs/next-word-predictor"
+
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+ignore = []
